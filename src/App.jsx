@@ -8,11 +8,7 @@ const App = () => {
   const { photos, loading, fetchPhotos } = useFetchPhotos();
   const loaderRef = useRef(null);
 
-  useInfiniteScroll(loaderRef, () => {
-    if (!loading) {
-      fetchPhotos();
-    }
-  });
+  useInfiniteScroll(fetchPhotos, loading); 
 
   return (
     <div ref={loaderRef}>

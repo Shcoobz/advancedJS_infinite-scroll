@@ -1,28 +1,22 @@
 import { useEffect } from 'react';
 
-const useInfiniteScroll = (scrollRef, loadMore) => {
+const useInfiniteScroll = (loadMore, loading) => {
   useEffect(() => {
-    const currentElement = scrollRef.current;
-
     const handleScroll = () => {
-      if (currentElement) {
-        const { scrollTop, scrollHeight, clientHeight } = currentElement;
-        if (clientHeight + scrollTop >= scrollHeight - 10) {
-          loadMore();
-        }
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 &&
+        !loading
+      ) {
+        loadMore();
       }
     };
 
-    if (currentElement) {
-      currentElement.addEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (currentElement) {
-        currentElement.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [scrollRef, loadMore]);
+  }, [loadMore, loading]);
 };
 
 export default useInfiniteScroll;

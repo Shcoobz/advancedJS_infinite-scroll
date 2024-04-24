@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 const ImageContainer = ({ photos }) => {
   return (
     <div className='image-container' id='image-container'>
-      {photos.map((photo) => (
+      {photos.map((photo, index) => (
         <a
           href={photo.links.html}
           target='_blank'
           rel='noopener noreferrer'
-          key={photo.id}>
+          key={photo.id + index}>
           <img
             src={photo.urls.regular}
             alt={photo.alt_description}
