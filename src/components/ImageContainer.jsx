@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 
-const ImageContainer = ({ photos }) => {
+/**
+ * Functional component to render a container with images.
+ * @param {Object[]} photos - Array of photo objects to be displayed.
+ */
+function ImageContainer({ photos }) {
   return (
     <div className='image-container' id='image-container'>
       {photos.map((photo, index) => (
@@ -18,7 +22,7 @@ const ImageContainer = ({ photos }) => {
       ))}
     </div>
   );
-};
+}
 
 ImageContainer.propTypes = {
   photos: PropTypes.arrayOf(

@@ -4,11 +4,14 @@ import ImageContainer from './components/ImageContainer';
 import useFetchPhotos from './hooks/useFetchPhotos';
 import useInfiniteScroll from './hooks/useInfiniteScroll';
 
-const App = () => {
+/**
+ * The main application component, managing the UI and state for an infinite photo scroll feature.
+ */
+function App() {
   const { photos, loading, fetchPhotos } = useFetchPhotos();
   const loaderRef = useRef(null);
 
-  useInfiniteScroll(fetchPhotos, loading); 
+  useInfiniteScroll(fetchPhotos, loading);
 
   return (
     <div ref={loaderRef}>
@@ -17,6 +20,6 @@ const App = () => {
       <ImageContainer photos={photos} />
     </div>
   );
-};
+}
 
 export default App;

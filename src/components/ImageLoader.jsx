@@ -1,11 +1,14 @@
 import loaderImage from '../../assets/loader.svg';
 
-const ImageLoader = () => {
+/**
+ * Displays a loading animation.
+ */
+function ImageLoader() {
   return (
     <div className='loader' id='loader'>
       <img src={loaderImage} alt='Loading' />
     </div>
   );
-};
+}
 
 export default ImageLoader;
