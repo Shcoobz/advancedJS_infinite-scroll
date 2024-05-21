@@ -1,10 +1,10 @@
-# react_Infinite Scroll: [LIVE DEMO](https://shcoobz.github.io/react_infinite-scroll/)
+# advancedJS_Infinite Scroll: [LIVE DEMO](https://shcoobz.github.io/advancedJS_infinite-scroll/)
 
-![react_Infinite Scroll](assets/react_infinite-scroll.png)
+![advancedJS_Infinite Scroll](assets/advancedJS_infinite-scroll.png)
 
 ## Summary
 
-react_Infinite Scroll provides a seamless browsing experience by fetching and displaying a continuous flow of images from the Unsplash API. It features a user-friendly interface that allows users to endlessly scroll through high-quality photos without manual page refreshes.
+advancedJS_Infinite Scroll provides a seamless browsing experience by fetching and displaying a continuous flow of images from the Unsplash API. It features a user-friendly interface that allows users to endlessly scroll through high-quality photos without manual page refreshes.
 
 The core functionality includes:
 
@@ -39,6 +39,6 @@ Implements robust error handling to manage and report any issues with network re
 
 ---
 
-_Note: This document provides an overview of react_Infinite Scroll. For detailed instructions and more information, please refer to the source code documentation._
+_Note: This document provides an overview of advancedJS_Infinite Scroll. For detailed instructions and more information, please refer to the source code documentation._
 
 _This project is a conversion from an earlier version built with vanilla JavaScript and HTML, available [here](https://github.com/Shcoobz/basicJS_infinite-scroll/). This conversion integrates React to enhance UI reactivity and maintainability._
